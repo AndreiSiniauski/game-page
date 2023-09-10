@@ -12,7 +12,8 @@
 
 @media (max-width: 768px) {
     .scroll {
-      height: 80vh;
+        -webkit-overflow-scrolling: touch;
+        height: 90vh;
     }
   }
   
