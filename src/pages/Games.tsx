@@ -4,7 +4,6 @@ import GameList from "../components/GameList";
 import SearchBar from "../components/SearchBar";
 import { GamesState, setDisplayCount } from "../store/slices/gamesSlice";
 import { useEffect, useRef } from "react";
-import './Games.css'
 
 function Games() {
   const dispatch = useDispatch();
@@ -24,13 +23,11 @@ function Games() {
 
     if (gameListRef.current) {
       gameListRef.current.addEventListener('scroll', handleScroll);
-      gameListRef.current.addEventListener('touchmove', handleScroll);
     }
 
     return () => {
       if (gameListRef.current) {
         gameListRef.current.removeEventListener('scroll', handleScroll);
-        gameListRef.current.removeEventListener('touchmove', handleScroll);
       }
     };
   }, [displayCount, dispatch]);
@@ -43,7 +40,16 @@ function Games() {
   return (
     <div
       ref={gameListRef}
-      className='scroll'
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '20px',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        overflowY: 'auto',
+        height: 'vh',
+        width: '100%',
+      }}
     >
       <SearchBar />
       <FilterBar />
