@@ -4,6 +4,7 @@ import GameList from "../components/GameList";
 import SearchBar from "../components/SearchBar";
 import { GamesState, setDisplayCount } from "../store/slices/gamesSlice";
 import { useEffect, useRef } from "react";
+import './Games.css'
 
 function Games() {
   const dispatch = useDispatch();
@@ -42,17 +43,7 @@ function Games() {
   return (
     <div
       ref={gameListRef}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '20px',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        overflowY: 'auto',
-        height: '100vh',
-        width: '100%',
-        touchAction: 'auto'
-      }}
+      className='scroll'
     >
       <SearchBar />
       <FilterBar />

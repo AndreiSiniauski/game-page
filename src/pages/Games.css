@@ -1,0 +1,18 @@
+.scroll {
+    display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: 'auto';
+        height: 100vh;
+        width: 100%;
+        touch-action: 'auto';
+}
+
+@media (max-width: 768px) {
+    .scroll {
+      height: 80vh;
+    }
+  }
+  
