@@ -1,0 +1,30 @@
+.game-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 310px;
+  }
+  
+  .game-card:hover {
+    transform: scale(0.8);
+  }
+  
+  .game-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .game-card h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px auto;
+  }
