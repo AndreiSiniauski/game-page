@@ -47,7 +47,7 @@ function Games() {
         justifyContent: 'flex-start',
         alignItems: 'center',
         overflowY: 'auto',
-        height: 'vh',
+        height: '100vh',
         width: '100%',
       }}
     >
