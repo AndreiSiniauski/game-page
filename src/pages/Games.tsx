@@ -23,11 +23,13 @@ function Games() {
 
     if (gameListRef.current) {
       gameListRef.current.addEventListener('scroll', handleScroll);
+      gameListRef.current.addEventListener('touchmove', handleScroll);
     }
 
     return () => {
       if (gameListRef.current) {
         gameListRef.current.removeEventListener('scroll', handleScroll);
+        gameListRef.current.removeEventListener('touchmove', handleScroll);
       }
     };
   }, [displayCount, dispatch]);
@@ -47,7 +49,7 @@ function Games() {
         justifyContent: 'flex-start',
         alignItems: 'center',
         overflowY: 'auto',
-        height: '95vh',
+        height: '100vh',
         width: '100%',
       }}
     >
