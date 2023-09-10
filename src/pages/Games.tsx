@@ -51,6 +51,7 @@ function Games() {
         overflowY: 'auto',
         height: '100vh',
         width: '100%',
+        touchAction: 'auto'
       }}
     >
       <SearchBar />
